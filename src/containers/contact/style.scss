@@ -1,0 +1,163 @@
+.contact {
+  &__content {
+    padding: 20px;
+
+    &__header-text {
+      color: var(--yellow-theme-sub-text-color);
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      padding: 5px 10px;
+      border-bottom: 2px solid var(--yellow-theme-main-color);
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: "";
+        width: 2px;
+        height: 5px;
+        background-color: var(--yellow-theme-main-color);
+        bottom: -1px;
+      }
+
+      &::before {
+        left: 0;
+      }
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    &__form {
+      margin-top: 30px;
+      
+
+      &__controlswrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 30px;
+        div {
+          position: relative;
+          .inputName,
+          .inputEmail,
+          .inputDescription {
+            width: 100%;
+            border: 2px solid var(--yellow-theme-main-color);
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+            color: var(--yellow-theme-sub-text-color);
+          }
+          .nameLabel,
+          .emailLable,
+          .descriptionLabel {
+            font-weight: 500;
+            position: absolute;
+            top: 7px;
+            left: 12px;
+            transition: all 0.5s ease;
+            color: var(--yellow-theme-sub-text-color);
+            font-size: 16px;
+          }
+          .inputName:focus,
+          .inputEmail:focus,
+          .inputDescription:focus {
+            outline: none;
+          }
+          
+          .inputName:focus + .nameLabel,
+          .inputName:valid + .nameLabel,
+          .inputEmail:focus + .emailLable,
+          .inputEmail:valid + .emailLable,
+          .inputDescription:focus + .descriptionLabel,
+          .inputDescription:valid + .descriptionLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+    }
+    button{
+        cursor: pointer;
+        padding: 10px 70px;
+        font-size: 2rem;
+        background: transparent;
+        color : var(--yellow-theme-main-color);
+        border:1.5px solid  var (--yellow-theme-main-color);
+        border-radius: 4px;
+        font-weight: 500;
+        &:hover{
+            color: #000;
+        background: var(--yellow-theme-main-color);
+        }
+    }
+
+  }
+}
+.inputDescription {
+  width: 100%;
+  height: 150px; /* Adjust the height as desired */
+  border: 2px solid var(--yellow-theme-main-color);
+  padding: 16px 12px;
+  transition: all 0.5s ease;
+  position: relative;
+  background-color: transparent;
+  color: var(--yellow-theme-sub-text-color);
+}
+@media only screen and (max-width:768px){ .contact__content__form{
+    align-items:center ;
+    &__controlswrapper{
+        grid-template-columns: repeat(1,1fr)
+        ;
+    }
+}
+
+
+}
+@media screen and (max-width: 768px) {
+    .contact {
+      &__content {
+        &__header-text {
+          font-size: 18px;
+          padding: 3px 8px;
+        }
+  
+        &__form {
+          margin-top: 20px;
+  
+          &__controlswrapper {
+            gap: 20px;
+  
+            div {
+              .inputName,
+              .inputEmail,
+              .inputDescription {
+                padding: 12px 8px;
+                font-size: 14px;
+              }
+              .nameLabel,
+              .emailLable,
+              .descriptionLabel {
+                top: 5px;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+  
+      button {
+        padding: 8px 40px;
+        font-size: 1.5rem;
+      }
+    }
+  }
