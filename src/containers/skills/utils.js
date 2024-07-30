@@ -36,7 +36,7 @@ export const skillsData = [
             percentage: '5',
           },
           {
-            skillName: 'DotNEt',
+            skillName: 'Figma Design',
             percentage: '5',
           },
         

@@ -4,7 +4,7 @@ import { BsInfoCircleFill } from "react-icons/bs";
 import "./style.scss";
 import { Animate } from "react-simple-animate";
 import emailjs from 'emailjs-com';
-import {HiX} from  "react-tsparticles"
+// import {HiX} from  "react-tsparticles"
 
 
 const Contact = () => {

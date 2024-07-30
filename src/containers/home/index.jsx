@@ -26,8 +26,14 @@ const Home = () => {
       >
         <div className="home__contact-me">
           <button onClick={handleNavigateCpage}>Hire Me</button>
-          <a href="resume.pdf" download="Selamawit resume.pdf">
+          <a href="selamawit.pdf" download="Selamawit resume.pdf">
               <button className="btn higlithted-btn"> Get Resume</button>
+          </a>
+          <a href="educational documents.pdf" download="documents.pdf">
+              <button className="btn higlithted-btn"> Get Document</button>
+          </a>
+          <a href="certeficates.pdf" download="documents.pdf">
+              <button className="btn higlithted-btn"> Get Certeficate</button>
           </a>
         </div>
       

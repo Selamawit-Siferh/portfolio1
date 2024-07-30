@@ -33,7 +33,10 @@ const Resume = () => {
                 border:'1.5px solid var( --yellow-theme-main-color)'
 
                 }}
-                date="2007-present"
+                // date="2007-present"
+                date= {item.date}
+
+
                 icon={<MdWork/>}
                 iconStyle={{background:'#181818',
                 color:'var(--yellow-theme-main-color)',
@@ -67,7 +70,8 @@ const Resume = () => {
                 color:'var(--yellow-theme-sub-text-color)',
                 border:'1.5px solid var( --yellow-theme-main-color)'
                 , }}
-                date="2007-present"
+                // date="2007-present"
+                date= {item.date}
                 icon={<MdWork/>}
                 iconStyle={{background:'#181818',
                 color:'var(--yellow-theme-main-color)',
