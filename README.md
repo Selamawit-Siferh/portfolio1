@@ -27,3 +27,4 @@
     -"start": "set PORT=4000 && react-scripts start",
   -"start": "set PORT=4000 && react-scripts start",
      then npm start
+    deploy at  :https://selamawit-siferh.github.io/portfolio1/
