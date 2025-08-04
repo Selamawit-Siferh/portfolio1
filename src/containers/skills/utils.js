@@ -1,7 +1,11 @@
 export const skillsData = [
     {
-      label: 'Front End',
+      label: 'Web Development Tools',
       data: [
+            {
+            skillName: 'Figma Design',
+            percentage: '5',
+          },
         {
           skillName: 'HTML',
           percentage: '80',
@@ -18,34 +22,37 @@ export const skillsData = [
             skillName: 'Tailwind',
             percentage: '30',
           },
-      ],
-    },
-    {
-        label: 'Bank End',
-      data: [
-        {
+           {
+            skillName: 'React Js',
+            percentage: '50',
+          },
+           {
           skillName: 'Django',
           percentage: '40',
         },
+      ],
+    },
+    {
+        label: 'API resting tools  ',
+      data: [
         {
-            skillName: 'Node Express',
-            percentage: '10',
-          },
+          skillName: 'Postman',
+          percentage: '40',
+        },
           {
-            skillName: 'DotNEt',
-            percentage: '5',
-          },
-          {
-            skillName: 'Figma Design',
-            percentage: '5',
-          },
+          skillName: 'Swagger',
+          percentage: '40',
+        },
+       
+
+      
         
       ],  
     },{
         label: 'DataBase',
         data: [
           {
-            skillName: 'SQL',
+            skillName: 'SQL Server',
             percentage: '50',
           },
           {
@@ -56,10 +63,35 @@ export const skillsData = [
               skillName: 'PostGress',
               percentage: '50',
             },
-            {
-              skillName: 'Oracle',
-              percentage: '20',
+           
+        ],
+    },{
+        label: 'Version Control',
+        data: [
+          {
+            skillName: 'Git',
+            percentage: '50',
+          },
+          {
+              skillName: 'GitHub',
+              percentage: '60',
             },
+            {
+              skillName: 'PostGress',
+              percentage: '50',
+            },
+           
+        ],
+    }
+,{
+        label: 'Web Services',
+        data: [
+          {
+            skillName: 'Api Integration',
+            percentage: '50',
+          },
+          
+           
         ],
     }
 

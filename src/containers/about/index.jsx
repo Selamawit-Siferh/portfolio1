@@ -3,8 +3,9 @@ import "./style.scss";
 import PageHeaderContainer from "../../components/pageHeaderContent";
 import { BsInfoCircleFill } from "react-icons/bs";
 import { Animate } from "react-simple-animate";
-import { DiApple, DiAndroid } from "react-icons/di";
-import { FaDev, FaDatabase } from "react-icons/fa";
+
+import { FaReact, FaHtml5, FaCss3Alt, FaDatabase } from "react-icons/fa";
+import { SiDjango } from "react-icons/si";
 const personDetails = [
   {
     lable: "Name",
@@ -12,7 +13,7 @@ const personDetails = [
   },
   {
     lable: "age",
-    value: "22",
+    value: "24",
   },
   {
     lable: "Address",
@@ -28,7 +29,7 @@ const personDetails = [
   },
 ];
 const jobSummary =
-  "I am a Medium Front-End Developer with 1 year of internship experience. During my internship, I gained valuable skills in front-end development and honed my abilities in HTML, CSS, and JavaScript. Additionally, I have 3 months of experience in Figma Design and React development at HBJB company, where I focused on creating user-friendly interfaces and implementing interactive components using React. I also worked as a Full Stack Developer at MINT company for 4 months, utilizing HTML, CSS, JavaScript, and Django to develop web applications. In my role at PEDS company for 7 months, I contributed to the successful implementation of various applications. With a diverse skill set and a strong understanding of the development process, I am confident in my ability to deliver high-quality solutions and contribute effectively to future projec ";
+  "Motivated and skilled Software Engineer with a strong foundation in Software Engineering andcomputer science principles. I have honed my skills in developing innovative, responsive, and user centric web applications using modern tools and frameworks. Proficient in front-end technologies with a basic understanding of back-end systems and RESTful APIs, I deliver scalable, high-performance solutions. My academic background and project experience have equipped me with solid programming knowledge and software development methodologies. With a passion for technology,creativity, and continuous learning ";
 const About = () => {
   return (
     <section className="about" id="about">
@@ -46,7 +47,7 @@ const About = () => {
             start={{ transform: "translateX(-900px)" }}
             end={{ transform: "translate(0px)" }}
           >
-            <h3>Front end developer</h3>
+            <h3>Software Engineer</h3>
             <p>{jobSummary}</p>
           </Animate>
           <Animate
@@ -70,29 +71,47 @@ const About = () => {
           </Animate>
         </div>
         <div className="about__content__servicesWrapper">
-        <Animate
+          <Animate
             play
             duration={1.5}
             delay={1}
             start={{ transform: "translateX(600px)" }}
             end={{ transform: "translate(0px)" }}
           >
-          <div className="about__content__servicesWrapper__innerContent">
-          <div>
-            <FaDev size={60} color="var(--yellow-theme-main-color)" />
-          </div>
-          <div>
-            <DiAndroid size={60} color="var(--yellow-theme-main-color)" />
-          </div>
-          <div>
-            <FaDatabase size={60} color="var(--yellow-theme-main-color)" />
-          </div>
-          <div>
-            <DiApple size={60} color="var(--yellow-theme-main-color)" />
-          </div>
-          </div>
+            {/* <div className="about__content__servicesWrapper__innerContent">
+              <div>
+                <FaDev size={60} color="var(--yellow-theme-main-color)" />
+              </div>
+              <div>
+                <DiAndroid size={60} color="var(--yellow-theme-main-color)" />
+              </div>
+              <div>
+                <FaDatabase size={60} color="var(--yellow-theme-main-color)" />
+              </div>
+              <div>
+                <DiApple size={60} color="var(--yellow-theme-main-color)" />
+              </div>
+            </div> */}
+
+            <div className="about__content__servicesWrapper__innerContent">
+              <div>
+                <FaHtml5 size={60} color="var(--yellow-theme-main-color)" />
+                <p>HTML</p>
+              </div>
+              <div>
+                <FaCss3Alt size={60} color="var(--yellow-theme-main-color)" />
+                <p>CSS</p>
+              </div>
+              <div>
+                <FaReact size={60} color="var(--yellow-theme-main-color)" />
+                <p>React</p>
+              </div>
+              <div>
+                <SiDjango size={60} color="var(--yellow-theme-main-color)" />
+                <p>Django</p>
+              </div>
+            </div>
           </Animate>
-         
         </div>
       </div>
     </section>

@@ -1,102 +1,119 @@
+
 @keyframes typingEffectAnimation {
   from {
-  width: 0;
+    width: 0;
   }
   to {
-  width: 100%;
+    width: 100%;
   }
-  }
-  
-  .home {
+}
+
+.home {
   position: relative;
   height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
-  
+
   &__text_wrapper {
-  display: flex;
-  justify-content: center;
-  h1 {
-  color: var(--yellow-theme-main-color);
-  margin: 0;
-  font-weight: 500;
-  font-size: 8rem;
-  line-height: 10rem;
-  position: relative;
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typingEffectAnimation 2.5s steps(30, end);
+    display: flex;
+    justify-content: center;
+    h1 {
+      color: var(--yellow-theme-main-color);
+      margin: 0;
+      font-weight: 500;
+      font-size: 8rem;
+      line-height: 10rem;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      animation: typingEffectAnimation 2.5s steps(30, end);
+    }
   }
-  }
+
   &__contact-me {
-  display: flex;
-  justify-content: center;
-  margin: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px;
+
+    button {
+      cursor: pointer;
+      padding: 10px 20px;
+      font-size: 2rem;
+      background: transparent;
+      color: var(--yellow-theme-main-color);
+      border: 1.5px solid var(--yellow-theme-main-color);
+      border-radius: 10px;
+      font-weight: 500;
+      background: white;
+      color: red;
+      margin: 5px; // Ensure spacing between buttons
+
+      &:hover {
+        background: var(--yellow-theme-main-color);
+        color: #000000;
+      }
+    }
   }
-  button {
-  cursor: pointer;
-  padding: 10px 45px;
-  font-size: 2rem;
-  background: transparent;
-  color: var(--yellow-theme-main-color);
-  border: 1.5px solid var(--yellow-theme-main-color);
-  border-radius: 10px;
-  font-weight: 500;
-  background: white;
-  color: red;
-  &:hover{background: var(--yellow-theme-main-color);
-  color: #000000;}
-  
+
+  .colz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+
+    .colz-icon i {
+      color: white;
+      padding: 8px;
+      font-size: 15px;
+      padding-left: 0;
+
+      &:hover {
+        transform: scale(1.5);
+      }
+    }
   }
-  }
-.colz {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 1rem;
 }
 
-.colz .colz-icon i {
-  color: white;
-  padding: 8px;
-  font-size: 15px;
-  padding-left: 0;
+@media screen and (max-width: 550px) {
+  .home__text_wrapper h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+  }
 }
 
-.colz .colz-icon i:hover {
-  transform: scale(1.5);
+@media screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text_wrapper h1 {
+    font-size: 4rem;
+    line-height: 6rem;
+  }
 }
 
-.home__contact-me {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px;
-  max-width: 400px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the buttons horizontally */
+@media screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text_wrapper h1 {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
 }
-  
-  .home__contact-me button {
-    margin-right: 16px; /* Adjust the gap between buttons as needed */
-  }
-  @media screen and (max-width: 550px) {
+@media screen and (max-width: 550px) {
   .home__text_wrapper h1 {
-  font-size: 3rem;
-  line-height: 5rem;
+    font-size: 10vw; // Larger size for smaller screens
+    line-height: 12vw; // Maintain proportion
   }
-  }
-  
-  @media screen and (min-width: 551px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 551px) and (max-width: 768px) {
   .home__text_wrapper h1 {
-  font-size: 4rem;
-  line-height: 6rem;
+    font-size: 8vw; // Adjust size for medium screens
+    line-height: 10vw;
   }
-  }
-  
-  @media screen and (min-width: 769px) and (max-width: 990px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 990px) {
   .home__text_wrapper h1 {
-  font-size: 6rem;
-  line-height: 8rem;
+    font-size: 6vw; // Smaller size for larger screens
+    line-height: 8vw;
   }
-  }
+}

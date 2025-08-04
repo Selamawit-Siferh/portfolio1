@@ -8,13 +8,24 @@ const Home = () => {
   const handleNavigateCpage = () => {
     navigate('/contact');
   };
+  const handleDownloadAndOpen = (fileUrl, downloadName) => {
+  // Open in new tab
+  window.open(fileUrl, '_blank', 'noopener,noreferrer');
+  // Trigger download
+  const link = document.createElement('a');
+  link.href = fileUrl;
+  link.download = downloadName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 
   return (
     <section className="home" id='home'>
       <div className="home__text_wrapper">
         <h1>
           Hello, I'm Selamawit<br />
-          Front End Developer
+          Software Engineer
         </h1>
       </div>
       <Animate
@@ -25,8 +36,29 @@ const Home = () => {
         end={{ transform: 'translate(0px)' }}
       >
         <div className="home__contact-me">
+    <button onClick={handleNavigateCpage}>Hire Me</button>
+    <button
+      className="btn highlighted-btn"
+      onClick={() => handleDownloadAndOpen('Selamawit-resume.pdf', 'Selamawit resume.pdf')}
+    >
+      Get Resume
+    </button>
+    <button
+      className="btn highlighted-btn"
+      onClick={() => handleDownloadAndOpen('educational documents.pdf', 'selamawit certeficate.pdf.pdf')}
+    >
+      Get Document
+    </button>
+    <button
+      className="btn highlighted-btn"
+      onClick={() => handleDownloadAndOpen('selamawit certeficate.pdf', 'selamawit certeficate.pdf.pdf')}
+    >
+      Get Certificate
+    </button>
+</div>
+        {/* <div className="home__contact-me">
           <button onClick={handleNavigateCpage}>Hire Me</button>
-          <a href="selamawit.pdf" download="Selamawit resume.pdf">
+          <a href="Selamawit-resume.pdf" download="Selamawit resume.pdf">
               <button className="btn higlithted-btn"> Get Resume</button>
           </a>
           <a href="educational documents.pdf" download="documents.pdf">
@@ -35,7 +67,7 @@ const Home = () => {
           <a href="certeficates.pdf" download="documents.pdf">
               <button className="btn higlithted-btn"> Get Certeficate</button>
           </a>
-        </div>
+        </div> */}
       
           <div className="colz">
             <div className="colz-icon">

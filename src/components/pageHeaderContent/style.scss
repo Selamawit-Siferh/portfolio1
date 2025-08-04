@@ -1,19 +1,65 @@
-.wrapper{display: flex;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px dashed var(--yellow-theme-main-color);
-    h2{font-size: 36px;
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px dashed var(--yellow-theme-main-color);
+  flex-wrap: wrap; // Allow wrapping on smaller screens
+  
+  h2 {
+    font-size: 2rem; // Use rem for scalability
     font-weight: 700;
-letter-spacing: 1.5px;
-line-height: 1rem;
-text-transform: capitalize;
-color: var(--yellow-theme-main-color);
-display: flex;
-flex-grow: 1;
-}
-span{
-    svg{
-        color: var(--yellow-theme-main-color);
+    letter-spacing: 1.5px;
+    line-height: 1.2; // Adjust line height for better spacing
+    text-transform: capitalize;
+    color: var(--yellow-theme-main-color);
+    flex-grow: 1; // Allow header to take available space
+    margin: 0; // Remove default margin for better alignment
+  }
+  
+  span {
+    svg {
+      color: var(--yellow-theme-main-color);
+      width: 2rem; // Set width for consistency
+      height: 2rem; // Set height for consistency
     }
+  }
 }
+
+// Media Queries for Responsiveness
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 15px; // Adjust padding for smaller screens
+    
+    h2 {
+      font-size: 1.5rem; // Reduce font size for better fit
+      line-height: 1.2; // Maintain line height
+    }
+    
+    span {
+      svg {
+        width: 1.5rem; // Adjust icon size for smaller screens
+        height: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    flex-direction: column; // Stack items on very small screens
+    align-items: flex-start; // Align items to the left
+
+    h2 {
+      font-size: 1.25rem; // Further reduce font size
+    }
+    
+    span {
+      margin-top: 5px; // Add spacing above icon
+      svg {
+        width: 1.25rem; // Further adjust icon size
+        height: 1.25rem;
+      }
+    }
+  }
 }

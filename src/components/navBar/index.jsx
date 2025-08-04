@@ -3,8 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import {HiX} from 'react-icons/hi'
 import {FaBars} from "react-icons/fa"
-// import HiX from "../../assets/x.png";
-// import FaBars from "../../assets/ba.png";
+
 import './style.scss'
 const Data = [
     {
@@ -12,7 +11,7 @@ const Data = [
       to: "/",
     },
     {
-      label: "ABOUT ME",
+      label: "ABOUT",
       to: "/about",
     },
     {
@@ -45,9 +44,10 @@ const NavBar = () => {
     <div>
       <nav className="navbar">
         <div className="navbar_container">
-          <Link to="/destination-url" className="navbar_container_logo">
-            <FaReact size={30} />
-          </Link>
+          {/* <Link to="/logo" className="navbar_container_logo">
+            <img src="logo.png" alt="" width={80}  height={70}/>
+          </Link> */}
+          <h1 className="navbar_container_logo">Selamawit</h1>
         </div>
         <ul className={`navbar_container_menu ${toggleIcon ? 'Active' : ''}`}>
           {Data.map((item, key) => (
